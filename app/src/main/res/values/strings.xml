@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WhatsApp Clone</string>
+    <string name="otpSent_changeNumber">Waiting to automatically detect the sms \n sent to %s, Wrong Number?</string>
+</resources>
