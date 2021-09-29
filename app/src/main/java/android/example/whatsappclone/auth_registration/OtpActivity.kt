@@ -1,6 +1,7 @@
-package android.example.whatsappclone
+package android.example.whatsappclone.auth_registration
 
 import android.content.Intent
+import android.example.whatsappclone.R
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.SpannableString
@@ -95,6 +96,7 @@ class OtpActivity : AppCompatActivity(), View.OnClickListener {
                 .addOnCompleteListener {
                     if(it.isSuccessful){
                         startActivity(Intent(this, SignUpActivity::class.java))
+                        finish()
                     }else{
                         createAlertDialog("Verification Failed! Please try again")
                     }

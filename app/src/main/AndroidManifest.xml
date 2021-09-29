@@ -13,9 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsAppClone">
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".main_ui.ChatActivity"></activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".main_ui.SplashActivity"
             android:theme="@style/Theme.Splash"/>
 
 <!--             <intent-filter>-->
@@ -25,17 +25,17 @@
 <!--             <category android:name="android.intent.category.LAUNCHER" />-->
 <!--             </intent-filter>-->
 
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".OtpActivity" />
+        <activity android:name=".auth_registration.SignUpActivity"/>
+        <activity android:name=".auth_registration.OtpActivity" />
         <activity
-            android:name=".LoginActivity">
+            android:name=".auth_registration.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".main_ui.MainActivity" />
     </application>
 
 </manifest>

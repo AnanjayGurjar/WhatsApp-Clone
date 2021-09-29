@@ -1,6 +1,7 @@
-package android.example.whatsappclone
+package android.example.whatsappclone.auth_registration
 
 import android.content.Intent
+import android.example.whatsappclone.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
@@ -56,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, OtpActivity::class.java)
         intent.putExtra(PHONE_NUMBER, phoneNumber)
         startActivity(intent)
+        finish()
     }
 
 

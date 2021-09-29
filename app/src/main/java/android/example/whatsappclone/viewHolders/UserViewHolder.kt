@@ -1,11 +1,11 @@
-package android.example.whatsappclone
+package android.example.whatsappclone.viewHolders
 
+import android.example.whatsappclone.R
+import android.example.whatsappclone.dataClass.User
 import android.view.View
-import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_sign_up.view.*
 import kotlinx.android.synthetic.main.people_item.view.*
 
 class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
