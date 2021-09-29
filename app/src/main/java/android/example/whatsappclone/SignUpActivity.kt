@@ -16,7 +16,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
-
+const val DATA_USER = "users"
 class SignUpActivity : AppCompatActivity() {
 
     val firebaseStorage = FirebaseStorage.getInstance()
@@ -33,13 +33,22 @@ class SignUpActivity : AppCompatActivity() {
             checkPermissionForImage()
         }
         btn_next.setOnClickListener {
+            btn_next.isEnabled = false
             val name = et_name.text.toString()
             if(name.isNotEmpty()){
                 et_name.setError("Field is Mandatory")
             }else if(!::downloadUrl.isInitialized){
                 Toast.makeText(this, "Please set a profile picture", Toast.LENGTH_SHORT).show()
             }else{
-
+                val user = User(name, downloadUrl, downloadUrl, firebaseAuth.uid!!)
+                database.collection(DATA_USER).document(firebaseAuth.uid!!).set(user)
+                        .addOnSuccessListener {
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        }
+                        .addOnFailureListener {
+                            btn_next.isEnabled = true
+                        }
             }
         }
     }

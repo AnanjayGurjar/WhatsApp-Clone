@@ -45,6 +45,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
     implementation 'com.google.firebase:firebase-firestore:23.0.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.paging:paging-runtime-ktx:3.0.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -70,6 +72,22 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth'
     implementation 'androidx.browser:browser:1.3.0'
+
+    implementation 'com.firebaseui:firebase-ui-firestore:6.2.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.google.firebase:firebase-database:20.0.2'
+
+    //for pagination in android
+    implementation 'androidx.paging:pagingo-runtime:2.1.2'
+
+    //flexBox
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation 'com.vanniktech:emoji-material:0.7.0'
+    implementation 'com.vanniktech:emoji-google:0.7.0'
+
+
 
 
 

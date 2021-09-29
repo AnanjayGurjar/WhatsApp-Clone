@@ -10,4 +10,5 @@
     <color name="defualt">#FEA789</color>
     <color name="pink">#FA5679</color>
     <color name="linkBlue">#1C54ED</color>
+    <color name="darker_grey">#6AFFFFFF</color>
 </resources>
